@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+
+    <title>Home</title>
+</head>
+
+
+<body id="login">
+    
+    <div class="overlay">
+        <!-- ================================spinner============================== -->
+        <!-- <div class="parent-spinner">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div> -->
+        <!-- ================================/spinner============================== -->
+
+        <!-- ======================login form================================= -->
+
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-6 m-auto p-5">
+                    <div class="form p-5 ">
+                <h2 class="text-center text-white">Sign In</h2>
+
+                        <form action="/handelSignIn" method="POST">
+                            <input name="email" placeholder="Email" type="email" class="form-control my-4 inp" type="text">
+                            <input name="password" placeholder="Password" type="password" class="form-control my-4 inp" type="text">
+                            <button type="submit" class="btn btn-outline-info w-100 text-white">Login</button>
+                            <p class="text-center text-white pt-3">
+                                Don't Have an account..?  <a href="/" class="text-white" >Sign Up Here</a>
+                            </p>
+                        </form>
+                        <% if (exists.length!=0) { %>
+                            <div class="alert alert-danger text-center" role="alert">
+                                email incorrect
+                            </div>
+                           <% } %>
+                           <% if (incorrect.length!=0) { %>
+                            <div class="alert alert-danger text-center" role="alert">
+                                 password incorrect
+                            </div>
+                           <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+<%- include('shared/footer.ejs')  %> 
